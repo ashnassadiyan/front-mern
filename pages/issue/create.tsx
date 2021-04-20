@@ -1,4 +1,6 @@
 import React from 'react'
+import Button from '../../components/forms/Button'
+import Input from '../../components/forms/Input'
 
 interface IssueI {
     id: number;
@@ -14,9 +16,25 @@ const create = () => {
         issueType: '',
         create: ''
     })
+    const setChanages = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setstate({ ...state, [e.target.name]: e.target.value })
+    }
+    const submit = () => {
+        console.log(state)
+    }
     return (
         <div>
             <h1>create</h1>
+
+
+            <div>
+                <Input name="id" onChange={setChanages} holder={'id'} />
+                <Input name="custno" onChange={setChanages} holder={'custno'} />
+                <Input name="issueType" onChange={setChanages} holder={'issueType'} />
+                <Input name="create" onChange={setChanages} holder={'create'} />
+            </div>
+            <Button name="submit" onClick={submit} />
+
         </div>
     )
 }
