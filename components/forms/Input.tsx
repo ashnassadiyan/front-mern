@@ -9,7 +9,7 @@ interface InputI {
 const Input: React.FC<InputI> = ({ name, onChange, holder }) => {
     return (
         <div>
-            <input name={name} onChange={onChange} placeholder={holder} />
+            <input name={name} onChange={onChange} placeholder={holder} className="form-control" />
         </div>
     )
 }

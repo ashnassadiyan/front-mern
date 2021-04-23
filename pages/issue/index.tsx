@@ -25,7 +25,7 @@ const index = () => {
         <div>
             <h1>index</h1>
             <Link href='/issue/create'>
-                <button>Create</button>
+                <button className="btn btn-primary">Create</button>
             </Link>
             <Table header={arra} data={state} />
         </div>

@@ -8,13 +8,13 @@ interface TableI {
 const Table: React.FC<TableI> = ({ header, data }) => {
     return (
         <>
-            <table >
+            <table className="table" >
                 <thead>
-                    <tr>
+                    <tr >
                         {
                             header.map((d, index) => {
                                 return (
-                                    <td key={index}>{d}</td>
+                                    <th key={index} className="col"><b>{d}</b></th>
                                 )
                             })
                         }

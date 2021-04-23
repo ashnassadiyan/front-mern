@@ -25,19 +25,24 @@ const create = () => {
         Axios.post('/issue', state).then(res => { alert('success') }).catch(res => alert('failed'))
     }
     return (
-        <div>
+        <div className="container">
             <h1>create</h1>
 
 
-            <div>
-                <Input name="id" onChange={setChanages} holder={'id'} />
-                <Input name="custno" onChange={setChanages} holder={'custno'} />
-                <Input name="issueType" onChange={setChanages} holder={'issueType'} />
-                <Input name="create" onChange={setChanages} holder={'create'} />
+            <div className="container">
+                <div className="row">
+                    <div className="col"> <Input name="id" onChange={setChanages} holder={'id'} /></div>
+                    <div className="col"><Input name="custno" onChange={setChanages} holder={'custno'} /></div>
+                </div><br />
+                <div className="row">
+                    <div className="col"> <Input name="issueType" onChange={setChanages} holder={'issueType'} /></div>
+                    <div className="col"><Input name="create" onChange={setChanages} holder={'create'} /></div>
+                </div><br />
+                <Button name="submit" onClick={submit} classname={"btn btn-primary"} />
             </div>
-            <Button name="submit" onClick={submit} />
 
-        </div>
+
+        </div >
     )
 }
 
