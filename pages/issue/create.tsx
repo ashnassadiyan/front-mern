@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from '../../components/forms/Button'
 import Input from '../../components/forms/Input'
+import Axios from '../api/Axios'
 
 interface IssueI {
     id: number;
@@ -21,6 +22,7 @@ const create = () => {
     }
     const submit = () => {
         console.log(state)
+        Axios.post('/issue', state).then(res => { alert('success') }).catch(res => alert('failed'))
     }
     return (
         <div>
